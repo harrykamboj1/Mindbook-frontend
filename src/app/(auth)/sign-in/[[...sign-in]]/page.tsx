@@ -6,10 +6,10 @@ function SignInPage() {
     return (
         <div className="min-h-screen flex bg-[#0f0f0f]">
             {/* Left Panel - Branding */}
-            <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-[#1a1a1a] via-[#0f0f0f] to-[#1a1a1a] p-12 flex-col justify-between border-r border-gray-800">
+            <div className="hidden lg:flex lg:w-1/2 bg-linear-to-br from-[#1a1a1a] via-[#0f0f0f] to-[#1a1a1a] p-12 flex-col justify-between border-r border-gray-800">
                 <div>
                     <div className="mb-8 relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 via-blue-500/20 to-cyan-500/20 blur-3xl rounded-full scale-150 opacity-60" />
+                        <div className="absolute inset-0 bg-linear-to-r from-purple-500/20 via-blue-500/20 to-cyan-500/20 blur-3xl rounded-full scale-150 opacity-60" />
                         <Image
                             src="/logo.png"
                             alt="Mindbook Logo"
@@ -32,7 +32,7 @@ function SignInPage() {
 
                 <div className="space-y-6">
                     <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-[#252525] border border-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-10 h-10 bg-[#252525] border border-gray-700 rounded-lg flex items-center justify-center shrink-0">
                             <span className="text-white"><Book /></span>
                         </div>
                         <div>
@@ -42,7 +42,7 @@ function SignInPage() {
                     </div>
 
                     <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-[#252525] border border-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-10 h-10 bg-[#252525] border border-gray-700 rounded-lg flex items-center justify-center shrink-0">
                             <span className="text-white"><MessageSquareMore /></span>
                         </div>
                         <div>
@@ -52,7 +52,7 @@ function SignInPage() {
                     </div>
 
                     <div className="flex items-start gap-4">
-                        <div className="w-10 h-10 bg-[#252525] border border-gray-700 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <div className="w-10 h-10 bg-[#252525] border border-gray-700 rounded-lg flex items-center justify-center shrink-0">
                             <span className="text-white"><Lock /></span>
                         </div>
                         <div>
