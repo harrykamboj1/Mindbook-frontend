@@ -84,10 +84,12 @@ export const apiClient = {
         return response.json();
     },
     uploadToS3: async (url: string, file: File) => {
+        // Note: We don't set Content-Type header here because the presigned URL
+        // is generated without ContentType in the signature. The browser will
+        // set an appropriate Content-Type automatically based on the file.
         const response = await fetch(url, {
             method: "PUT",
             body: file,
-            headers: { "Content-Type": file.type },
         });
         if (!response.ok) {
             throw new Error(`S3 Upload Error: ${response.status}`);
