@@ -10,6 +10,8 @@ import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
 
 import toast from "react-hot-toast";
 import { apiClient } from "@/lib/api";
+import { ConversationsList } from "@/components/projects/ConversationsList";
+import { KnowledgeBaseSidebar } from "@/components/projects/KnowledgeBaseSidebar";
 
 interface Project {
     id: string;
@@ -20,29 +22,18 @@ interface Project {
 }
 
 function ProjectsPage() {
-    // * Data States - What data we're tracking
     const [projects, setProjects] = useState<Project[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // * UI States - How the interface looks and behaves
     const [searchQuery, setSearchQuery] = useState("");
     const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
-    // Modal state
     const [showCreateModal, setShowCreateModal] = useState(false);
     const [isCreating, setIsCreating] = useState(false);
 
-    // Clerk : https://clerk.com/docs/nextjs/reference/hooks/use-auth
     const { getToken, userId } = useAuth();
     const router = useRouter();
-
-    /*
-    ! Business Logic Functions - Core operations for this page:
-    * - loadProjects: Get all projects from the server
-    * - handleCreateProject: Make a new project with name and description
-    * - handleDeleteProject: Delete a project by its ID
-    */
 
     const loadProjects = async () => {
         try {
@@ -108,11 +99,7 @@ function ProjectsPage() {
         }
     };
 
-    /*
-    ! User Interaction Functions:
-    * - handleProjectClick: Go to a specific project page when clicked
-    * - handleOpenModal/handleCloseModal: Show/hide the new project form
-    */
+
 
     const handleProjectClick = (projectId: string) => {
         router.push(`/projects/${projectId}`);
