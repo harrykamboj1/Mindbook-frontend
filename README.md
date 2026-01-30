@@ -1,62 +1,35 @@
-# 🎨 Mindbook Frontend
+# Mindbook Frontend
 
-A modern, premium dark-themed frontend for **Mindbook** — built with Next.js 15, TypeScript, and Tailwind CSS.
+Frontend for **Mindbook** — built with Next.js 15, TypeScript, and Tailwind CSS.
 
 ---
 
-## ✨ Features
+## Features
 
-### 🔐 Authentication
+### Authentication
 - Clerk-powered sign-in/sign-up pages
 - Dark-themed auth components
 - Protected dashboard routes
 
-### 🎯 Dashboard
+### Dashboard
 - Collapsible sidebar navigation
 - Project grid/list views
 - Real-time search filtering
 
-### 📁 Project Management
+### Project Management
 - Create and organize projects
 - Document upload with drag & drop
 - URL ingestion for web content
 - RAG settings configuration
 
-### 💬 Chat Interface
+### Chat Interface
 - Real-time streaming responses
 - Message citations with sources
 - Feedback system (like/dislike)
 - Agent status indicators
 
-### 🎨 UI Polish
-- Custom animations (fade, slide, scale)
-- Glass morphism effects
-- Skeleton loading states
-- Enhanced toast notifications
-- Gradient text effects
 
----
-
-## 🏗️ Architecture Diagrams
-
-### High-Level Design
-![High Level Design](./public/hld.png)
-
-### RAG Pipeline
-![RAG Pipeline](./public/Rag_pipeline_architecture.png)
-
-### RAG Agent Flow
-![RAG Agent](./public/rag_agent.png)
-
-### Retrieval Pipeline
-![Retrieval Pipeline](./public/retreival_pipeline.png)
-
-### Database Schema
-![Database Schema](./public/database_schema.png)
-
----
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 frontend/
@@ -96,13 +69,9 @@ frontend/
 │   │   │   └── document-details/   # Document pipeline steps
 │   │   │
 │   │   └── ui/                     # Reusable UI primitives
-│   │       ├── Button.tsx
-│   │       ├── Skeleton.tsx
-│   │       ├── EmptyState.tsx
-│   │       ├── Toast.tsx
 │   │       ├── LoadingSpinner.tsx
 │   │       ├── NotFound.tsx
-│   │       └── index.ts            # Barrel exports
+│   │       
 │   │
 │   ├── lib/
 │   │   ├── api/                    # API client
@@ -128,7 +97,7 @@ frontend/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -168,54 +137,14 @@ NEXT_PUBLIC_API_URL=http://localhost:8000
 
 ---
 
-## 🛠️ Development
+## Development
 
 ### Available Scripts
 
 ```bash
 npm run dev        # Start development server (port 3000)
-npm run build      # Create production build
-npm run start      # Start production server
-npm run lint       # Run ESLint
-npm run lint:fix   # Fix linting issues
-```
 
-### Design System
-
-The design system is defined in `src/app/globals.css`:
-
-#### CSS Variables
-```css
---dark-bg: #0f0f0f
---dark-surface: #1a1a1a
---dark-surface-hover: #252525
---dark-border: #2a2a2a
-```
-
-#### Animation Classes
-```css
-.animate-fade-in      /* Fade in */
-.animate-fade-in-up   /* Fade in from bottom */
-.animate-scale-in     /* Scale in */
-.animate-pulse-glow   /* Pulsing glow effect */
-.animate-shimmer      /* Shimmer loading effect */
-.animate-float        /* Floating effect */
-```
-
-#### Utility Classes
-```css
-.glass               /* Glass morphism */
-.glow-md             /* Medium glow */
-.gradient-mesh       /* Mesh gradient background */
-.text-gradient       /* Gradient text */
-.skeleton            /* Loading skeleton */
-.btn-primary         /* Primary button */
-.card                /* Card container */
-```
-
----
-
-## 📦 Key Dependencies
+## Key Dependencies
 
 | Package | Version | Purpose |
 |---------|---------|---------|
@@ -228,116 +157,6 @@ The design system is defined in `src/app/globals.css`:
 | **react-hot-toast** | latest | Notifications |
 | **react-dropzone** | latest | File upload |
 
----
-
-## 🎨 Component Usage
-
-### Button Component
-```tsx
-import { Button, IconButton } from "@/components/ui";
-import { Plus, Trash2 } from "lucide-react";
-
-<Button variant="primary" leftIcon={Plus}>
-  Create Project
-</Button>
-
-<Button variant="secondary" isLoading>
-  Saving...
-</Button>
-
-<IconButton icon={Trash2} variant="danger" aria-label="Delete" />
-```
-
-### Skeleton Loading
-```tsx
-import { Skeleton, ProjectCardSkeleton } from "@/components/ui";
-
-<Skeleton height="100px" className="rounded-xl" />
-<ProjectCardSkeleton />
-```
-
-### Empty State
-```tsx
-import { EmptyState } from "@/components/ui";
-import { FileText } from "lucide-react";
-
-<EmptyState
-  icon={FileText}
-  title="No documents yet"
-  description="Upload your first document to get started"
-  action={{
-    label: "Upload Document",
-    onClick: handleUpload
-  }}
-/>
-```
-
-### Custom Toast
-```tsx
-import { customToast } from "@/components/ui";
-
-customToast.success("Project created!");
-customToast.error("Failed to save");
-customToast.promise(apiCall, {
-  loading: "Saving...",
-  success: "Saved!",
-  error: "Failed"
-});
-```
-
----
-
-## 🌐 API Integration
-
-The frontend communicates with the backend via the `apiClient`:
-
-```tsx
-import { apiClient } from "@/lib/api";
-import { useAuth } from "@clerk/nextjs";
-
-const { getToken } = useAuth();
-const token = await getToken();
-
-// GET request
-const projects = await apiClient.get("/api/projects/", token);
-
-// POST request
-const newProject = await apiClient.post("/api/projects/", data, token);
-
-// DELETE request
-await apiClient.delete(`/api/projects/${id}`, token);
-```
-
----
-
-## 🚢 Deployment
-
-### Deploy to Vercel
-
-1. Push your code to GitHub
-2. Import project in Vercel
-3. Set environment variables
-4. Deploy!
-
-```bash
-# Or use Vercel CLI
-npx vercel
-```
-
-### Build for Production
-
-```bash
-npm run build
-npm run start
-```
-
----
-
-## 📝 License
-
-This project is private and proprietary.
-
----
 
 ## 👤 Author
 
