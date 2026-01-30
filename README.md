@@ -148,16 +148,16 @@ npm run dev        # Start development server (port 3000)
 
 | Package | Version | Purpose |
 |---------|---------|---------|
-| **next** | 15.x | React framework |
-| **react** | 19.x | UI library |
-| **typescript** | 5.x | Type safety |
-| **tailwindcss** | 4.x | Styling |
-| **@clerk/nextjs** | latest | Authentication |
-| **lucide-react** | latest | Icons |
-| **react-hot-toast** | latest | Notifications |
-| **react-dropzone** | latest | File upload |
+| next | 15.x | React framework |
+| react | 19.x | UI library |
+| typescript | 5.x | Type safety |
+| tailwindcss | 4.x | Styling |
+| @clerk/nextjs | latest | Authentication |
+| lucide-react | latest | Icons |
+| react-hot-toast | latest | Notifications |
+| react-dropzone | latest | File upload |
 
 
 ## 👤 Author
 
-**harrykamboj1** — [singhharnoor116@gmail.com](mailto:singhharnoor116@gmail.com)
+harrykamboj1 — [singhharnoor116@gmail.com](mailto:singhharnoor116@gmail.com)
