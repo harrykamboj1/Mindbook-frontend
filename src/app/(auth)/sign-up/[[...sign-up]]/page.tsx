@@ -70,7 +70,7 @@ function SignUpPage() {
 
             {/* Right Panel - Sign Up Form */}
             <div className="w-full lg:w-1/2 flex items-center justify-center bg-[#0f0f0f] p-8">
-                <SignUp signInUrl="/sign-in" forceRedirectUrl="/" />
+                <SignUp signInUrl="/sign-in" forceRedirectUrl="/projects" />
             </div>
         </div>
     );
