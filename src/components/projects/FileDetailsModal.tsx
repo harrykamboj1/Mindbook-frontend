@@ -22,7 +22,7 @@ interface FileDetailsModalProps {
 const PIPELINE_STEPS = [
     {
         id: "uploading",
-        name: "Upload to S3",
+        name: "Upload to R2",
         description: "Uploading file to secure cloud storage",
     },
     {

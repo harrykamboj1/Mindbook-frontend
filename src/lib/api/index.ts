@@ -83,7 +83,7 @@ export const apiClient = {
 
         return response.json();
     },
-    uploadToS3: async (url: string, file: File) => {
+    uploadToR2: async (url: string, file: File) => {
         // Note: We don't set Content-Type header here because the presigned URL
         // is generated without ContentType in the signature. The browser will
         // set an appropriate Content-Type automatically based on the file.
@@ -92,8 +92,8 @@ export const apiClient = {
             body: file,
         });
         if (!response.ok) {
-            throw new Error(`S3 Upload Error: ${response.status}`);
+            throw new Error(`Cloudflare R2 Upload Error: ${response.status}`);
         }
-        return response; // S3 doesn't return JSON
+        return response; // Cloudflare R2 doesn't return JSON
     },
 };

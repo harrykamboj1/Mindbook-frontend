@@ -218,8 +218,8 @@ function ProjectPage({ params }: ProjectPageProps) {
 
                 const { upload_url, s3_key } = uploadData.data;
 
-                // Step 2: Upload file to S3
-                await apiClient.uploadToS3(upload_url, file);
+                // Step 2: Upload file to Cloudflare R2
+                await apiClient.uploadToR2(upload_url, file);
 
                 // Step 3: Confirm upload to the server (starts background processing)
                 const updatedDocument = await apiClient.post(
