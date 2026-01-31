@@ -141,7 +141,7 @@ NEXT_PUBLIC_API_URL=http://localhost:8000
 
 ### Available Scripts
 
-```bash
+
 npm run dev        # Start development server (port 3000)
 
 ## Key Dependencies
@@ -160,4 +160,4 @@ npm run dev        # Start development server (port 3000)
 
 ## 👤 Author
 
-harrykamboj1 — [singhharnoor116@gmail.com](mailto:singhharnoor116@gmail.com)
+**harrykamboj1** — [singhharnoor116@gmail.com](mailto:singhharnoor116@gmail.com)
