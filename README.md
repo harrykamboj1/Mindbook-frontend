@@ -2,6 +2,9 @@
 
 Frontend for **Mindbook** — built with Next.js 15, TypeScript, and Tailwind CSS.
 
+https://github.com/user-attachments/assets/dc34451a-4b74-4656-975f-9b822405aca9
+
+
 ---
 
 ## Features
